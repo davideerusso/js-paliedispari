@@ -31,12 +31,13 @@
 
 function VerificaRisultato(sceltautente, somma) {
   let messaggio = "Hai perso";
-  if ((somma % 2 === 0, sceltautente === "pari")) {
-    messaggio = "Hai vinto";
-  } else if ((somma % 2 === 1, sceltautente === "dispari")) {
+
+  if (somma % 2 === 0 && sceltautente === "pari") {
     messaggio = "Hai vinto";
   }
-
+  if (somma % 2 === 0 && sceltautente === "pari") {
+    messaggio = "Hai vinto";
+  }
   return messaggio;
 }
 
@@ -50,7 +51,7 @@ console.log("numero somma", risultatoDispari);
 console.log("numero user", numberUser);
 console.log("numero pc", numberPc);
 
-console.log("Somma", VerificaRisultato(pariDispari, risultatoDispari));
+console.log("Somma ", VerificaRisultato(pariDispari, risultatoDispari));
 
 // console.log(parola);
 
