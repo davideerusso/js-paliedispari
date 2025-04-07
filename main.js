@@ -35,7 +35,7 @@ function VerificaRisultato(sceltautente, somma) {
   if (somma % 2 === 0 && sceltautente === "pari") {
     messaggio = "Hai vinto";
   }
-  if (somma % 2 === 0 && sceltautente === "pari") {
+  if (somma % 2 === 1 && sceltautente === "dispari") {
     messaggio = "Hai vinto";
   }
   return messaggio;
