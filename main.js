@@ -29,29 +29,28 @@
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 // Dichiariamo chi ha vinto.
 
-function isInArray(numberRandom, somma) {
-  if (somma % 2 === 0 && pariDispari == pari) {
-    return true, "Risultato Pari, Hai vinto";
-  } else if (somma % 2 === 0 && pariDispari == dispari) {
-    return true, "Risultato Pari, Hai perso";
-  } else if (somma % 2 === 1 && pariDispari == dispari) {
-    return true, "Risultato Pari, Hai vinto";
-  } else if (somma % 2 === 1 && pariDispari == pari) {
-    return true, "Risultato Pari, Hai perso";
+function VerificaRisultato(sceltautente, somma) {
+  let messaggio = "Hai perso";
+  if ((somma % 2 === 0, sceltautente === "pari")) {
+    messaggio = "Hai vinto";
+  } else if ((somma % 2 === 1, sceltautente === "dispari")) {
+    messaggio = "Hai vinto";
   }
-  return false;
+
+  return messaggio;
 }
 
-const numberPc = Math.round(Math.random() * 5) + 1;
-const pariDispari = prompt("pari o dispari?", "pari");
+const numberPc = Math.floor(Math.random() * 5) + 1;
+const pariDispari = prompt("pari o dispari?", "pari").toLowerCase();
 const numberUser = parseInt(prompt("Inserisci un numero da 1 a 5", "3"));
 
 let risultatoDispari = parseInt(numberUser + numberPc);
+
 console.log("numero somma", risultatoDispari);
 console.log("numero user", numberUser);
 console.log("numero pc", numberPc);
 
-console.log("Somma ", isInArray(numberPc, risultatoDispari));
+console.log("Somma", VerificaRisultato(pariDispari, risultatoDispari));
 
 // console.log(parola);
 
